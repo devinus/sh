@@ -1,5 +1,7 @@
 # Sh
 
+[![Build Status](https://secure.travis-ci.org/devinus/sh.png?branch=master)](http://travis-ci.org/devinus/sh)
+
 An Elixir module inspired by Python's [sh](http://amoffat.github.io/sh/)
 package. `Sh` allows you to call any program as if it were a function.
 
