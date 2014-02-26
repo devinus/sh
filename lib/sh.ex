@@ -49,7 +49,11 @@ defmodule Sh do
       key = to_string(key)
       if String.length(key) == 1 do
         if value do
-          ["-#{key}", to_string(value) | acc]
+          if value != true do
+            ["-#{key}", to_string(value) | acc]
+          else
+            ["-#{key}" | acc]
+          end
         else
           acc
         end

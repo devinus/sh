@@ -23,6 +23,7 @@ defmodule ShTest do
   end
 
   test "commands with options" do
+    assert Sh.echo("Hello World!", n: true) == "Hello World!"
     assert Sh.curl("http://httpbin.org/html", o: tmp_path("page.html"), silent: true) == ""
     assert File.exists?(tmp_path("page.html"))
   end
