@@ -6,7 +6,7 @@ defmodule Sh.Mixfile do
   def project do
     [ app: :sh,
       version: @version,
-      elixir: "~> 0.12.4",
+      elixir: "~> 0.13.1",
       deps: deps ]
   end
 
