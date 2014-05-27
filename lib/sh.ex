@@ -1,12 +1,16 @@
 defmodule Sh do
-  defexception CommandNotFound, command: nil do
-    def message(__MODULE__[command: command]) do
+  defmodule CommandNotFound do
+    defexception [:command]
+
+    def message(%{command: command}) do
       "Command not found: #{command}"
     end
   end
 
-  defexception AbnormalExit, output: nil, status: nil do
-    def message(__MODULE__[status: status]) do
+  defmodule AbnormalExit do
+    defexception [:output, :status]
+
+    def message(%{status: status}) do
       "exited with non-zero status (#{status})"
     end
   end
@@ -39,7 +43,7 @@ defmodule Sh do
           { ^port, { :exit_status, 0 } } ->
             acc
           { ^port, { :exit_status, status } } ->
-            raise AbnormalExit[output: acc, status: status]
+            raise %AbnormalExit{output: acc, status: status}
         end
     end
   end
