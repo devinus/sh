@@ -4,13 +4,16 @@ defmodule ShTest do
   alias Sh.CommandNotFound
   alias Sh.AbnormalExit
 
-  setup_all do
-    File.mkdir_p! Path.expand("tmp", __DIR__)
-    :ok
-  end
+  @tmp_dir Path.expand("tmp", __DIR__)
 
-  teardown_all do
-    File.rm_rf! Path.expand("tmp", __DIR__)
+  setup_all do
+    File.mkdir_p!(@tmp_dir)
+
+    on_exit fn ->
+      File.rm_rf!(@tmp_dir)
+      :ok
+    end
+
     :ok
   end
 
