@@ -6,7 +6,7 @@ defmodule Sh.Mixfile do
   def project do
     [app: :sh,
      version: @version,
-     elixir: "~> 0.15.0",
+     elixir: "~> 1.0.0-rc1",
      description: "Run programs as functions in Elixir",
      deps: deps,
      package: package]
