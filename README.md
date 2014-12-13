@@ -2,7 +2,7 @@
 
 [![Build Status](https://api.travis-ci.org/devinus/sh.svg?branch=master)](https://travis-ci.org/devinus/sh)
 
-[![Support via Gratipay](https://raw.githubusercontent.com/twolfson/gittip-badge/0.2.1/dist/gittip.png)](https://gratipay.com/devinus/)
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/devinus/)
 
 An Elixir module inspired by Python's [sh](http://amoffat.github.io/sh/)
 package. `Sh` allows you to call any program as if it were a function.
