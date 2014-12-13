@@ -32,6 +32,3 @@ Sh.curl "-o", "page.html", "--silent", "http://example.com/"
 ## Underscores
 
 Underscores in a program name or keyword options are converted to dashes.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/devinus/sh/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
