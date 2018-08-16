@@ -7,6 +7,15 @@
 An Elixir module inspired by Python's [sh](http://amoffat.github.io/sh/)
 package. `Sh` allows you to call any program as if it were a function.
 
+## Adding Sh to Your Project
+To use Sh with your projects, simply edit your mix.exs file and add it as a dependency:
+
+```elixir
+  defp deps do
+    [{:sh, "~> 1.1.2"}]
+  end
+```
+
 ## Example
 
 ```iex
